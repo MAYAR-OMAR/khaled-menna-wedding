@@ -1106,8 +1106,8 @@ section {
 
 /* حاوية صورة العروسين في النهاية */
 .outro-couple-photo {
-    width: 130px;
-    height: 160px;
+    width: 190px;
+    height: 180px;
     margin: 15px auto 20px auto;
     border-radius: 10px;
     border: transparent;
@@ -1139,6 +1139,31 @@ section {
     100% { transform: translateY(0px); }
 }
 
+
+.footer-credit {
+  text-align: center;
+  padding: 15px 0;
+  font-family: 'Times New Roman', Times, serif, 'Cinzel', serif; /* Ikhtiyar khat aniq w saghir qrib lil-sura */
+}
+
+.credit-link {
+  color: #3b2226; /* Al-lawn al-buni al-gamiq al-mawgod fi al-sura */
+  text-decoration: none;
+  font-size: 12px; /* Khat saghir giddan kaima tlabti */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.code-icon {
+  stroke: #3b2226;
+}
 
 
 
