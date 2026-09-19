@@ -1,0 +1,1145 @@
+:root {
+    --bg-light: #f9f6f0;
+    --bg-dark: #4a121a; /* Burgundy */
+    --text-gold: #cba135;
+    --text-dark: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Intro Cover */
+.intro-cover {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1), opacity 1s;
+}
+
+.cover-card {
+    background-color: var(--bg-light);
+    width: 80%;
+    max-width: 320px;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.cover-card .icon-heart {
+    font-size: 32px;
+    color: var(--bg-dark);
+    margin-bottom: 5px;
+}
+
+.cover-card h1 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+.cover-card .divider {
+    height: 1px;
+    background-color: #ccc;
+    width: 40px;
+    margin: 15px auto;
+}
+
+.cover-card .date, .cover-card .subtitle {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.open-btn {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Main Sections */
+section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+}
+
+.envelope-image-placeholder {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    background-color: #eaddd3;
+    margin: 30px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border: 2px dashed #ccc;
+}
+
+.names {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--bg-dark);
+}
+
+/* Burgundy Cards */
+.burgundy-card {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border-radius: 15px;
+    padding: 50px 30px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.burgundy-card h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.burgundy-card .announce {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.burgundy-card h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.burgundy-card .role {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.burgundy-card .ampersand {
+    font-style: italic;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Swiper Gallery */
+.swiper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    width: 260px;
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Calendar & Countdown */
+.countdown {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.calendar-card {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.cal-day {
+    font-weight: bold;
+    color: #888;
+}
+
+.active-day {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Guestbook */
+.guestbook-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.guestbook-card input, .guestbook-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.send-btn, .confirm-btn {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Music Btn */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--bg-dark);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* El Container el r2esy elly haylmehom kolohom */
+.envelope-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Momken t8yry el 7agm mn hena */
+    margin: 40px auto; /* 3shan ytwsatn fel nos */
+    aspect-ratio: 333 / 384; /* Btzbot nesbet el tool ll 3ard */
+}
+
+/* Layer 1: El 5alfeya */
+.layer-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Layer 2: Container el Sora */
+.layer-photo-container {
+    position: absolute;
+    top: -5%; /* Btrf3 el sora l fo2 shwaya bara el zarf */
+    left: 18%; /* Btzbot mkanha fel nos */
+    width: 64%; /* nfs el nesba bta3t el website */
+    z-index: 20;
+    background-color: white; /* By3ml el frame el abiad */
+    padding: 6px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Shadow 5afeef */
+    transform: rotate(-3deg); /* Mayalan 5afeef zay el design */
+}
+
+.couple-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* zay ma waade7 fel devtools 3ndek */
+    display: block;
+}
+
+/* Layer 3: El Warda */
+.layer-floral {
+    position: absolute;
+    left: -2%;
+    top: -12%;
+    width: 42%;
+    z-index: 25;
+    pointer-events: none; /* 3shan mat3mlsh block l ay click */
+}
+
+/* Layer 4: 8ata el Zarf */
+.layer-cover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+    pointer-events: none;
+}
+
+
+
+
+.ceremony-info {
+    padding: 60px 20px; /* Masafa mn fo2 w ta7t */
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* 3shan el warda matbosh el layout */
+}
+
+/* El Cart nfso (S8arnah hena) */
+.burgundy-card {
+    background-color: #590f1d;
+    color: #f7ede2;
+    width: 90%; 
+    max-width: 320px; /* S8arna el 3ard 3shan yb2a mlmom */
+    padding: 50px 20px; /* S8arna el masafat elda5leya */
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* El 5otot bta3t el kalam */
+.burgundy-card h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.announce {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.bride-groom-name {
+    font-size: 36px; /* S8arna el font sena */
+    font-family: serif;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.role {
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.ampersand {
+    font-size: 26px;
+    font-family: serif;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* ---------------------------------- */
+/* 🌸 CSS EL WARDA W EL ANIMATION 🌸 */
+/* ---------------------------------- */
+.floating-side-flower {
+    position: absolute;
+    right: -45px; /* Mkanha 3al yemeen */
+    top: 50%; /* Btwastnha fel nos bezabt */
+    width: 110px; /* 7agm el warda s8ar 5ales aho */
+    z-index: 5;
+    pointer-events: none;
+    
+    /* Animation gdeda btt7arek mn el nos */
+    animation: floatUpDownSmall 3.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDownSmall {
+    0% {
+        transform: translateY(-50%); /* Bdaya mn el nos */
+    }
+    50% {
+        transform: translateY(calc(-50% - 15px)); /* Ttla3 l fo2 15 bksel bs */
+    }
+    100% {
+        transform: translateY(-50%); /* Trg3 tany */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* El Background el Burgundy w el Cover */
+.intro-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #590f1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* El Card el Abyad el 3ard */
+
+/* El Icon el Heart elly fo2 el Asamy */
+.cover-card .icon-heart {
+    width: 45px;
+    height: 45px;
+    background-color: #590f1d;
+    color: #fcf8f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cover-card h1 {
+    font-family: serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.cover-card .divider {
+    width: 60px;
+    height: 1px;
+    background-color: #d1b5b8;
+    margin: 15px auto;
+}
+
+.cover-card .date {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.cover-card .subtitle {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #8c6d71;
+    margin-bottom: 25px;
+}
+
+/* Open Button */
+.open-btn {
+    background-color: #590f1d;
+    color: #fcf8f2;
+    border: none;
+    padding: 12px 45px;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.open-btn:hover {
+    background-color: #420b15;
+}
+
+
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg); /* 3shan tetgawaf m3 el zawya */
+}
+
+/* 💕 El Loloob elly bttfloat fel Background 💕 */
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart-float {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    animation: floatUp 6s linear infinite;
+}
+
+.heart-float:nth-child(1) { left: 15%; animation-delay: 0s; font-size: 14px; }
+.heart-float:nth-child(2) { left: 35%; animation-delay: 2s; font-size: 20px; }
+.heart-float:nth-child(3) { left: 75%; animation-delay: 1s; font-size: 12px; }
+.heart-float:nth-child(4) { left: 85%; animation-delay: 3s; font-size: 18px; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+.cover-card {
+    background-color: #fcf8f2;
+    color: #590f1d;
+    width: 90%;
+    max-width: 600px;
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    overflow: hidden; /* Mohemma gdan 3shan tkhly el warda ma tetla3sh bara el 7odod el mdawara */
+}
+
+/* 🌸 Tazbeet el Wardeten fel Trof bzbt 🌸 */
+.corner-flower {
+    position: absolute;
+    width: 110px; /* 3رض el warda 3shan teb2a vazba w mosh s'hira awy */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg); /* Betلف bshakl mnasb lel zawya el tahtanya */
+}
+
+
+
+
+/* Animation el 7araka el bseta fo2 w taht */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px); /* Betl3 fo2 8 pixels */
+    }
+    100% {
+        transform: translateY(0px); /* Trga3 mkanha */
+    }
+}
+
+/* Tatbeeq el animation 3al sora w el warda */
+.layer-photo-container {
+    animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.layer-floral {
+    animation: floatUpDown 4s ease-in-out infinite;
+    animation-delay: 0.3s; /* Delay bseta 3shan el harka tb2a tabi3ya msh nafs el waqt bzbt */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.photo-gallery-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f6efe9;
+    overflow: hidden;
+}
+
+.gallery-title {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #590f1d;
+    margin-bottom: 25px;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.gallery-card {
+    position: absolute;
+    width: 230px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background-color: #fff;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tarteeb el swar ymeen w shemal w fel nos */
+.gallery-card.active {
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gallery-card.prev {
+    transform: translateX(-110%) translateZ(-250px) rotateY(25deg) scale(0.85);
+    z-index: 5;
+    opacity: 0.5;
+}
+
+.gallery-card.next {
+    transform: translateX(110%) translateZ(-250px) rotateY(-25deg) scale(0.85);
+    z-index: 5;
+    opacity: 0.5;
+}
+
+.gallery-card.hidden-card {
+    transform: translateX(0) translateZ(-400px) scale(0.7);
+    z-index: 1;
+    opacity: 0;
+}
+
+/* El noqat */
+.gallery-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.gallery-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d1b5b8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-dots .dot.active {
+    background-color: #590f1d;
+    width: 24px;
+    border-radius: 4px;
+}
+
+
+
+
+
+.calendar-card {
+    background-color: #fcf8f2;
+    color: #590f1d;
+    width: 85%;
+    max-width: 320px;
+    margin: 25px auto 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.cal-month {
+    font-size: 16px;
+    font-family: serif;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    font-size: 13px;
+    align-items: center;
+    justify-items: center;
+}
+
+.cal-day {
+    font-size: 11px;
+    color: #8c6d71;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cal-num, .cal-grid > div:not(.cal-day):not(:empty) {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* El yom el mokhtar (29 October) */
+.active-day {
+    background-color: #590f1d;
+    color: #fcf8f2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(89, 15, 29, 0.4);
+}
+
+
+
+.location-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #fcf8f2;
+    color: #590f1d;
+    padding: 10px 22px;
+    font-size: 13px;
+    font-family: serif;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+    background-color: #f0e6e7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+
+
+/* Section Our Story & Map */
+.section-header {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.section-header .sub-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c9a04a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-header .main-title {
+    font-size: 24px;
+    font-family: serif;
+    color: #fcf8f2;
+    letter-spacing: 1px;
+}
+
+/* Story Map Container */
+.story-map-container {
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    height: 220px;
+    margin: 0 auto 30px auto;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(201, 160, 74, 0.2);
+    overflow: hidden;
+}
+
+/* SVG Routes Lines */
+.map-routes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Map Locations */
+.map-location {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    font-family: serif;
+}
+
+.map-location.egypt {
+    bottom: 25px;
+    left: 15%;
+}
+
+.map-location.jordan {
+    top: 20px;
+    right: 10%;
+}
+
+.map-location.riyadh-meet {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pin-icon {
+    font-size: 16px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.country-name {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #f0e6e7;
+    margin-top: 2px;
+}
+
+.person-tag {
+    font-size: 9px;
+    color: #c9a04a;
+    letter-spacing: 0.5px;
+}
+
+/* Riyadh Meeting Point */
+.heart-pulse {
+    font-size: 20px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(201, 160, 74, 0.6));
+}
+
+.meet-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #c9a04a;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+.meet-sub {
+    font-size: 9px;
+    color: #fcf8f2;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+
+
+
+
+
+
+/* الكارد البورجوندي الكبير اللي بيلم الصفحة كلها */
+.burgundy-card {
+    background-color: #590f1d; /* لون الكارد البورجوندي الاصلي */
+    width: 90%;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 25px 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تنسيق العناوين جوه الكارد */
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header .sub-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c9a04a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-header .main-title {
+    font-size: 22px;
+    font-family: serif;
+    color: #fcf8f2;
+    letter-spacing: 1px;
+}
+
+/* كارد الخريطة المصغر */
+/* Story Map Container بدون إطار أو خلفية مربعة */
+.story-map-container {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    margin: 10px 0 25px 0;
+    background-color: transparent; /* إلغاء الخلفية البيضاء الشفافة */
+    border: none; /* إلغاء الإطار الخارجي تماماً */
+    box-shadow: none;
+    overflow: visible;
+}
+.map-routes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-location {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    font-family: serif;
+}
+
+.map-location.egypt { bottom: 20px; left: 15%; }
+.map-location.jordan { top: 15px; right: 10%; }
+.map-location.riyadh-meet { top: 45%; left: 50%; transform: translate(-50%, -50%); }
+
+.pin-icon { font-size: 14px; }
+.country-name { font-size: 9px; color: #f0e6e7; margin-top: 2px; }
+.person-tag { font-size: 8px; color: #c9a04a; }
+
+.heart-pulse { font-size: 18px; animation: heartbeat 1.5s ease-in-out infinite; }
+.meet-title { font-size: 11px; font-weight: bold; color: #c9a04a; }
+.meet-sub { font-size: 8px; color: #fcf8f2; font-style: italic; white-space: nowrap; }
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* الفيديو المربع (Squared Video) */
+.square-video-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* بيخلي العرض قد الطول بالظبط (مربع) */
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(201, 160, 74, 0.3);
+}
+
+.square-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* بيظبط الفيديو جوه المربع من غير ما يتمط */
+    display: block;
+}
+
+
+
+
+/* قسم الختام */
+.outro-section {
+    padding: 20px 0 50px 0;
+}
+
+.outro-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.outro-flower {
+    width: 100px;
+    margin: 0 auto 10px auto;
+    display: block;
+    opacity: 0.9;
+    transform: rotate(180deg);
+}
+
+/* صندوق منع التصوير */
+.no-photo-box {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 160, 74, 0.2);
+    border-radius: 12px;
+    padding: 20px 15px;
+    margin: 15px 0;
+}
+
+.no-phone-icon {
+    color: #c9a04a;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-photo-title {
+    font-size: 13px;
+    font-family: serif;
+    letter-spacing: 2px;
+    color: #fcf8f2;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.no-photo-desc {
+    font-size: 11px;
+    color: #e6c5c8;
+    line-height: 1.6;
+    font-family: serif;
+}
+
+/* التنسيق الختامي للأسماء والرسالة */
+.outro-closing {
+    font-size: 12px;
+    color: #f0e6e7;
+    font-style: italic;
+    margin: 20px 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.outro-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.outro-names h2 {
+    font-size: 24px;
+    font-family: serif;
+    color: #fcf8f2;
+    margin: 0;
+}
+
+.outro-amp {
+    font-size: 20px;
+    color: #c9a04a;
+    font-family: serif;
+}
+
+
+/* حاوية صورة العروسين في النهاية */
+.outro-couple-photo {
+    width: 130px;
+    height: 160px;
+    margin: 15px auto 20px auto;
+    border-radius: 10px;
+    border: transparent;
+    overflow: hidden;
+ 
+}
+
+.outro-couple-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* تظبيط حركة الوردة على الجنب */
+.right-side {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    width: 110px;
+    pointer-events: none;
+    z-index: 2;
+    animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+
+
+
+

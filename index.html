@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled & Menna - Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <!-- Intro Cover -->
+   <div id="intro-cover" class="intro-cover">
+    <!-- El lolob elly bttfloat fel background -->
+    <div class="floating-hearts">
+        <span class="heart-float">♥</span>
+        <span class="heart-float">♥</span>
+        <span class="heart-float">♥</span>
+        <span class="heart-float">♥</span>
+    </div>
+
+    <div class="cover-card">
+        <!-- Warda fo2 shmal -->
+        <img src="./flower.png" alt="Flower" class="corner-flower top-left">
+        <!-- Warda ta7t yemeen -->
+        <img src="./flower.png" alt="Flower" class="corner-flower bottom-right">
+
+        <div class="icon-heart">♥</div>
+        <h1>Khaled<br>&<br>Menna</h1>
+        <div class="divider"></div>
+        <p class="date">October 17, 2026</p>
+        <p class="subtitle">Cordially Invites</p>
+        <button id="open-btn" class="open-btn">Open</button>
+    </div>
+</div>
+    <!-- Main Content (Hidden Initially) -->
+    <main id="main-content" class="hidden">
+        
+        <!-- Save the Date Section -->
+        <section class="save-the-date">
+            <p class="section-title">SAVE THE DATE</p>
+          <div class="envelope-wrapper">
+    <!-- Layer 1: El Zarf mn wara -->
+    <img src="./envelope-background.webp" class="layer-bg" alt="Envelope Background">
+    
+    <!-- Layer 2: Sora el 3ersan (Bel frame el abiad) -->
+    <div class="layer-photo-container">
+        <!-- Zay ma 3amleenha fel website bzbt -->
+        <img src="./img4.jfif" class="couple-photo" alt="Khaled and Menna">
+    </div>
+
+    <!-- Layer 3: El Warda (Btt7at fo2 el sora) -->
+    <img src="./flower.png" class="layer-floral" alt="Floral Element">
+
+    <!-- Layer 4: 8ata el Zarf mn oddam (3shan ye5aby goz2 mn el sora) -->
+    <img src="./envelope-cover.webp" class="layer-cover" alt="Envelope Cover">
+</div>
+            <h2 class="names">Khaled<br>&<br>Menna</h2>
+        </section>
+
+
+
+<section class="ceremony-info">
+    <div class="burgundy-card">
+        <!-- El Warda -->
+        <img src="./flower.png" alt="Side Floral" class="floating-side-flower">
+        
+        <!-- El Aya maktoba sotour taht ba3d zay el sora -->
+        <p class="quran-verse-stacked">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ<br>
+            أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم<br>
+            مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- Gomla el da3wa bardo sotour -->
+        <p class="invite-text-stacked">
+            يسعدنا ويشرفنا حضوركم ومشاركتكم أجمل<br>
+            لحظات فرحتنا، لنبدأ معاً حياة جديدة
+        </p>
+        
+        <!-- El Asamy Taht Ba3d -->
+        <div class="names-container">
+            <h2 class="inline-names">Khaled & Menna</h2>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="photo-gallery-section">
+    <h3 class="gallery-title">PHOTO GALLERY</h3>
+    
+    <div class="gallery-container" id="galleryContainer">
+        <!-- El 4 swar -->
+        <div class="gallery-card active" data-index="0">
+            <img src="./img1.jfif" alt="Photo 1">
+        </div>
+        <div class="gallery-card" data-index="1">
+            <img src="./img2.jfif" alt="Photo 2">
+        </div>
+        <div class="gallery-card" data-index="2">
+            <img src="./img3.jfif" alt="Photo 3">
+        </div>
+        <div class="gallery-card" data-index="3">
+            <img src="./img5.jfif" alt="Photo 4">
+        </div>
+    </div>
+
+    <!-- El noqat elly taht el gallery -->
+    <div class="gallery-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+     <section class="reception-info">
+    <div class="burgundy-card relative-card">
+        <!-- El Warda 3al gamb -->
+        <img src="./flower.png" alt="Side Floral" class="floating-side-flower right-side">
+        
+        <!-- El Countdown awel 7aga -->
+        <h3>COUNTDOWN</h3>
+        <div id="countdown-timer" class="countdown-container">
+            <span id="days">00</span> days 
+            <span id="hours">00</span> hours 
+            <span id="minutes">00</span> min 
+            <span id="seconds">00</span> sec
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Tfaṣeel el farah ba3d el countdown -->
+        <h3>INFO</h3>
+       <p class="location-name">Golden One</p>
+       <p class="location-name">كفر الشيخ_مركز الرياض</p>
+
+<!-- Location Button -->
+<a href="https://maps.app.goo.gl/ZKnmcYi4ZcJ1P6J38?g_st=iw" target="_blank" class="location-btn">
+    <span>View Location</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+</a>
+        
+        <p class="date-time">SATURDAY 07:00</p>
+        <p class="date-time">17 OCTOBER 2026</p>
+
+
+  <div class="calendar-card">
+    <p class="cal-month">October 2026</p>
+    <div class="cal-grid">
+        <!-- Ayam elosboa -->
+        <div class="cal-day">Sa</div>
+        <div class="cal-day">Su</div>
+        <div class="cal-day">Mo</div>
+        <div class="cal-day">Tu</div>
+        <div class="cal-day">We</div>
+        <div class="cal-day">Th</div>
+        <div class="cal-day">Fr</div>
+        
+        <!-- Saf el awel: 5 spaces ablsh 3shan 17 ytla3 3la el Sa bzabt -->
+        <div></div><div></div><div></div><div></div><div></div><div class="cal-num">1</div><div class="cal-num">2</div>
+        
+        <!-- Safof el shahr -->
+        <div class="cal-num">3</div><div class="cal-num">4</div><div class="cal-num">5</div><div class="cal-num">6</div><div class="cal-num">7</div><div class="cal-num">8</div><div class="cal-num">9</div>
+        <div class="cal-num">10</div><div class="cal-num">11</div><div class="cal-num">12</div><div class="cal-num">13</div><div class="cal-num">14</div><div class="cal-num">15</div><div class="cal-num">16</div>
+        <div class="active-day">17</div><div class="cal-num">18</div><div class="cal-num">19</div><div class="cal-num">20</div><div class="cal-num">21</div><div class="cal-num">22</div><div class="cal-num">23</div>
+        <div class="cal-num">24</div><div class="cal-num">25</div><div class="cal-num">26</div><div class="cal-num">27</div><div class="cal-num">28</div><div class="cal-num">29</div><div class="cal-num">30</div>
+        <div class="cal-num">31</div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+</div>
+        <!-- Lw 7aba tsebby taqweem el shahr (Calendar) 7otih hena -->
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="outro-section">
+    <div class="burgundy-card outro-card">
+        <img src="./flower.png" alt="Floral Element" class="floating-side-flower right-side">
+
+        <!-- مكان صورة العروسين بدل الوردة اللي في النص -->
+        <div class="outro-couple-photo">
+            <img src="./dmg sorten.png" alt="Khaled and Nada">
+        </div>
+
+        <!-- تنبيه عدم التصوير مع الأيقونة -->
+        <div class="no-photo-box">
+            <div class="no-phone-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    <line x1="2" y1="2" x2="22" y2="22"></line>
+                </svg>
+            </div>
+            <p class="no-photo-title">NO PHOTOGRAPHY PLEASE</p>
+            <p class="no-photo-desc">نرجو منكم مشاركتنا الفرحة بقلوبكم، ونعتذر عن عدم السماح بالتصوير خلال الحفل.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- كلمة الختام والأسماء -->
+        <p class="outro-closing">ننتظركم بكل حب لنصنع معاً ذكريات لا تُنسى</p>
+        
+        <div class="outro-names">
+            <h2>Khaled</h2>
+            <span class="outro-amp">&</span>
+            <h2>Menna</h2>
+        </div>
+    </div>
+</section>
+
+
+       
+    </main>
+
+    <!-- Floating Music Button -->
+    <div id="music-btn" class="music-btn">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    </div>
+    
+    <audio id="bg-music" loop>
+        <source src="./Tamer Hosny - Dehktha Mabethazarsh _ Official Music Video _ تامر حسنى - ضحكتها مبتهزرش [pSkFN3BR6zc].mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
